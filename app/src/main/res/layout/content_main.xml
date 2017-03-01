@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.bitmapshader.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            xmlns:ykmeory="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="BitmapShader实现圆形、圆角图片。点击图片切换效果"/>
+
+            <com.example.bitmapshader.view.RoundImageView
+                android:id="@+id/id_qiqiu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/qiqiu" />
+
+            <com.example.bitmapshader.view.RoundImageView
+                android:id="@+id/id_meinv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/aa"
+                ykmeory:borderRadius="20dp"
+                ykmeory:type="round" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
